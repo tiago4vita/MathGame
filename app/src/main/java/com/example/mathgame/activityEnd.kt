@@ -23,7 +23,6 @@ class activityEnd : AppCompatActivity() {
             } else {
                 bundle.getParcelable("score")
             }
-            println("score reecbido final ${score?.score}")
             val scoreTextView = findViewById<TextView>(R.id.textScore)
             scoreTextView.text = score?.score.toString()
         }

@@ -112,7 +112,6 @@ class GameActivity : AppCompatActivity() {
         val intent = Intent(this, activityEnd::class.java)
         val scoreToEnd = Score(score)
         intent.putExtra("score", scoreToEnd)
-        println("socre é $score")
         startActivity(intent)
     }
 }

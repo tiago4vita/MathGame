@@ -79,7 +79,6 @@ class GameActivity : AppCompatActivity() {
             return
         }
         val numberGuess = guess.toInt()
-        println("number guess is $numberGuess")
         if (numberGuess == rightAnswer) {
             paintBackground(true)
             score += 20
@@ -96,15 +95,9 @@ class GameActivity : AppCompatActivity() {
         val view = findViewById<View>(R.id.main)
         if (isCorrect) {
             view.setBackgroundColor(Color.GREEN)
-            Handler(Looper.getMainLooper()).postDelayed({
-                view.setBackgroundColor(Color.WHITE)
-            }, 20000)
         }
         else {
             view.setBackgroundColor(Color.RED)
-            Handler(Looper.getMainLooper()).postDelayed({
-                view.setBackgroundColor(Color.WHITE)
-            }, 20000)
         }
     }
 
